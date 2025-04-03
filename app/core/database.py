@@ -3,35 +3,6 @@ import psycopg2
 from psycopg2 import pool
 from app.core.config import DB_NAME, DB_USER, DB_PASSWORD, DB_HOST, DB_PORT
 
-# db_pool = pool.SimpleConnectionPool(
-#     minconn=1, maxconn=10,
-#     dbname=DB_NAME, 
-#     user=DB_USER,
-#     password=DB_PASSWORD, 
-#     host=DB_HOST, 
-#     port=DB_PORT
-# )
-
-# def get_db_connection():
-#     return db_pool.getconn()
-
-# def release_db_connection(conn):
-#     db_pool.putconn(conn)
-
-# def create_table():
-#     query = """
-#     CREATE TABLE IF NOT EXISTS all_resume_json (
-#         id SERIAL PRIMARY KEY,
-#         file_name TEXT UNIQUE NOT NULL,
-#         resume_data JSONB NOT NULL
-#     );
-#     """
-#     conn = get_db_connection()
-#     cur = conn.cursor()
-#     cur.execute(query)
-#     conn.commit()
-#     cur.close()
-#     release_db_connection(conn)
 
 
 # Connect to PostgreSQL
